@@ -9,7 +9,7 @@ export default function Home() {
         width={500}
         height={1000}
         alt="bg-image"
-        className="w-full h-full absolute opacity-5 z-0 "
+        className="w-full h-full absolute opacity-5 z-0"
       />
       <Image
         src={"/home_side.png"}
@@ -30,7 +30,7 @@ export default function Home() {
         alt="side image"
         height={1000}
         width={500}
-        className="absolute bottom-0 right-0 min-h-[100px] w-[100px] z-10"
+        className="absolute bottom-0 right-0 min-h-[100px] w-[100px] z-10  max-md:opacity-45"
       />
 
       {/* contents */}
@@ -38,7 +38,7 @@ export default function Home() {
       <div className="flex flex-col">
         <div className="grid md:grid-cols-2 min-h-[650px] place-items-center">
           <div className="flex flex-col md:gap-8 gap-3 h-full justify-center max-md:items-center max-md:p-0 pl-24 lg:pl-48 w-full">
-            <h1 className="text-white max-lg:text-3xl text-4xl font-serif font-semibold max-md:text-center">
+            <h1 className="text-white max-lg:text-3xl max-md:text-2xl text-4xl font-serif font-semibold max-md:text-center">
               Ready to take your <br />
               <span className="text-text_green underline">Business Growth</span>
               <br /> to the next level?

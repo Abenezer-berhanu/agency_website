@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { Button } from "../ui/button";
 
-function NavBar() {
+async function NavBar() {
   return (
     <div className="flex justify-between p-2">
       <div className="flex items-center font-bold text-xl">
@@ -16,9 +16,9 @@ function NavBar() {
           priority
           className="h-12 w-12"
         />
-        <p className="font-serif">Canvix</p>
+        <p className="font-serif max-md:w-hidden">Canvix</p>
       </div>
-      <div className="flex gap-6 items-center">
+      <div className="flex gap-6 items-center max-md:hidden">
         {navBarData.map((list, idx) => (
           <Link href={list.path} key={idx} className="text-md font-semibold">
             {list.label}
