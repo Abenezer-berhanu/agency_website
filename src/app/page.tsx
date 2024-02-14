@@ -100,7 +100,7 @@ export default function Home() {
       {/* home page landing page finish*/}
 
       {/* home page services  */}
-      <div className="max-w-[800px] flex flex-col mx-auto my-5 gap-5">
+      <div className="max-w-[800px] flex flex-col mx-auto my-20 gap-5">
         <div>
           <h1 className="font-semibold font-serif text-light_green text-center">
             Our services
@@ -186,6 +186,71 @@ export default function Home() {
           </span>
         </div>
       </div>
+      {/* home page services finish  */}
+
+      {/* home page about  */}
+      <div className="relative grid grid-cols-2 max-sm:grid-cols-1 gap-5 sm:gap-10 sm:py-5 sm:px-20 max-sm:px-3 sm:place-items-center bg-black">
+        <div className="relative w-full sm:min-h-[500px] flex items-center justify-center">
+          <Image
+            src={"/about_3.png"}
+            alt="image1"
+            width={500}
+            height={1000}
+            className="lg:max-w-[380px] md:max-w-[280px] sm:max-w-[180px] mt-[-30px] mr-8 absolute max-sm:hidden"
+          />
+          <Image
+            src={"/about_2.png"}
+            alt="image1"
+            width={500}
+            height={1000}
+            className="max-w-[380px] md:max-w-[280px] sm:max-w-[180px] m-auto z-0 max-sm:hidden"
+          />
+          <Image
+            src={"/about_1.png"}
+            alt="image1"
+            width={500}
+            height={1000}
+            className="lg:max-w-[380px] md:max-w-[280px] max-sm:max-w-[180px] sm:absolute sm:ml-8 max-sm:mt-5 sm:mt-[30px] z-10"
+          />
+        </div>
+        <div className="text-white w-full h-full flex flex-col gap-2 justify-center">
+          <h1 className="font-bold text-xl font-serif text-light_green">
+            About us{" "}
+          </h1>
+          <p className="max-w-[450px] text-wrap md:text-5xl md:scale-90font-bold font-serif text-3xl">
+            The core mission behind all our work
+          </p>
+          <small className="my-2 max-w-[450px]">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit metus ut
+            tortor purus tincidunt sed lectus ut eros, turpis tincidunt id.
+          </small>
+          <div className="flex gap-10">
+            <span className="font-bold text-2xl font-serif text-light_green flex flex-col">
+              <h2>
+                330<span>+</span>
+              </h2>
+              <p className="text-xs text-gray_white font-normal font-sans">
+                Companies helped
+              </p>
+            </span>
+            <span className="font-bold text-2xl font-serif text-light_green flex flex-col">
+              <h2>
+                330<span>+</span>
+              </h2>
+              <p className="text-xs text-gray_white font-normal font-sans">
+                Revenue generated
+              </p>
+            </span>
+          </div>
+          <Button
+            size={"sm"}
+            className="rounded-full bg-gray_white text-black w-fit my-3 hover:bg-slate-200 animate-bounce"
+          >
+            Start Your Free Trail
+          </Button>
+        </div>
+      </div>
+      {/* home page about finish  */}
     </>
   );
 }
