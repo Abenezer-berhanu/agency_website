@@ -189,8 +189,8 @@ export default function Home() {
       {/* home page services finish  */}
 
       {/* home page about  */}
-      <div className="relative grid grid-cols-2 max-sm:grid-cols-1 gap-5 sm:gap-10 sm:py-5 sm:px-20 max-sm:px-3 sm:place-items-center bg-black">
-        <div className="relative w-full sm:min-h-[500px] flex items-center justify-center">
+      <div className="relative grid grid-cols-2 max-sm:grid-cols-1 gap-5 sm:gap-10 sm:py-5 sm:px-20 max-sm:px-3 place-items-center bg-black">
+        <div className="relative w-full sm:min-h-[500px] max-sm:max-w-[350px] flex items-center justify-center">
           <Image
             src={"/about_3.png"}
             alt="image1"
@@ -210,10 +210,10 @@ export default function Home() {
             alt="image1"
             width={500}
             height={1000}
-            className="lg:max-w-[380px] md:max-w-[280px] max-sm:max-w-[180px] sm:absolute sm:ml-8 max-sm:mt-5 sm:mt-[30px] z-10"
+            className="lg:max-w-[380px] md:max-w-[280px] max-sm:max-w-[280px] max-sm:w-full sm:absolute sm:ml-8 max-sm:mt-5 sm:mt-[30px] z-10"
           />
         </div>
-        <div className="text-white w-full h-full flex flex-col gap-2 justify-center">
+        <div className="text-white w-full h-full flex flex-col gap-2 justify-center max-sm:max-w-[350px]">
           <h1 className="font-bold text-xl font-serif text-light_green">
             About us{" "}
           </h1>
