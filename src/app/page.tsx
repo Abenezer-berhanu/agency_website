@@ -1,4 +1,6 @@
+import Owner from "@/components/UiComponents/Owner";
 import RecentCard from "@/components/UiComponents/RecentCard";
+import Testimonilas from "@/components/UiComponents/Testimonilas";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
@@ -324,6 +326,18 @@ export default function Home() {
         </div>
       </div>
       {/* home page recent finish */}
+      <Separator />
+      {/* home page testimonials */}
+      <Testimonilas />
+      {/* home page testimonials finish */}
+
+      {/* home page owner */}
+      <div className="my-10">
+        <Owner />
+      </div>
+      {/* home page owner finish */}
+
+      {/* Empowering Innovation, One Code at a Time */}
     </>
   );
 }
