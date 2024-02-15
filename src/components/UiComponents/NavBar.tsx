@@ -1,10 +1,12 @@
+"use client";
 import { navBarData } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Button } from "../ui/button";
-
-async function NavBar() {
+import { usePathname } from "next/navigation";
+function NavBar() {
+  const path = usePathname();
   return (
     <div className="flex justify-between p-2">
       <div className="flex items-center font-bold text-xl">
@@ -20,7 +22,13 @@ async function NavBar() {
       </div>
       <div className="flex gap-6 items-center max-md:hidden">
         {navBarData.map((list, idx) => (
-          <Link href={list.path} key={idx} className="text-md font-semibold">
+          <Link
+            href={list.path}
+            key={idx}
+            className={`text-md font-semibold border-b-2 border-white ${
+              path == list.path && "border-light_green"
+            }`}
+          >
             {list.label}
           </Link>
         ))}
