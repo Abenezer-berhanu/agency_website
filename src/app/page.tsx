@@ -251,6 +251,40 @@ export default function Home() {
         </div>
       </div>
       {/* home page about finish  */}
+
+      {/* home page processes  */}
+      <div className="flex flex-col gap-3 max-w-[1000px] max-sm:text-center my-10 mx-auto max-sm:px-3 py-5">
+        <h1 className="font-bold text-xl font-serif text-light_green">
+          Process
+        </h1>
+        <p className="max-w-[550px] max-sm:mx-auto text-balance md:text-[40px] my-4 font-semibold font-serif text-3xl">
+          Process that moves things forward
+        </p>
+        <div className="grid grid-cols-3 gap-0 max-sm:mx-auto">
+          <span className="max-w-[300px] flex items-center pt-4 min-h-[200px] max-sm:col-span-3 bg-[url('/step1.png')] bg-cover">
+            <p className="max-w-[250px] w-[80%] px-2 pt-7 text-sm text-balance text-start flex flex-col">
+              <b className="tracking-wider font-serif">Ideate</b>
+              The ideation process is a crucial phase in the design process
+              where creative thinking and brainstorming
+            </p>
+          </span>
+          <span className="max-w-[300px] flex items-center pt-4 min-h-[200px] max-sm:col-span-3 bg-[url('/step2.png')] bg-cover">
+            <p className="max-w-[250px] w-[80%] px-2 pt-7 text-sm text-balance text-start flex flex-col">
+              <b className="tracking-wider font-serif">Research</b>
+              The ideation process is a crucial phase in the design process
+              where creative thinking and brainstorming
+            </p>
+          </span>
+          <span className="max-w-[300px] flex items-center pt-4 min-h-[200px] max-sm:col-span-3 bg-[url('/step3.png')] bg-cover">
+            <p className="max-w-[250px] w-[80%] px-2 pt-7 text-sm text-balance text-start flex flex-col">
+              <b className="tracking-wider font-serif">Implement</b>
+              The ideation process is a crucial phase in the design process
+              where creative thinking and brainstorming
+            </p>
+          </span>
+        </div>
+      </div>
+      {/* home page processes finish */}
     </>
   );
 }
