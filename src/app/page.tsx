@@ -1,3 +1,4 @@
+import RecentCard from "@/components/UiComponents/RecentCard";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { FaPenClip, FaPenNib } from "react-icons/fa6";
@@ -285,6 +286,40 @@ export default function Home() {
         </div>
       </div>
       {/* home page processes finish */}
+
+      {/* home page recent */}
+      <div className="my-10 max-w-[1000px] mx-auto flex flex-col gap-5">
+        <p className="max-w-[550px] w-fit text-end border-b border-blacktext-balance md:text-[40px] my-4 font-semibold font-serif text-3xl">
+          Process that moves things forward
+        </p>
+        <div className="sm:mr-auto gap-5 grid grid-cols-2">
+          <RecentCard
+            title="Web UI Design"
+            image="recent1.png"
+            year={2022}
+            date="Oct 22"
+          />
+          <RecentCard
+            title="Web UI Design"
+            image="recent2.png"
+            year={2022}
+            date="Oct 22"
+          />
+          <RecentCard
+            title="Web UI Design"
+            image="recent3.png"
+            year={2022}
+            date="Oct 22"
+          />
+          <RecentCard
+            title="Web UI Design"
+            image="recent4.png"
+            year={2022}
+            date="Oct 22"
+          />
+        </div>
+      </div>
+      {/* home page recent finish */}
     </>
   );
 }
