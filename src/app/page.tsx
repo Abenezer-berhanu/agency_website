@@ -1,5 +1,6 @@
 import RecentCard from "@/components/UiComponents/RecentCard";
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import { FaPenClip, FaPenNib } from "react-icons/fa6";
 import { GiSkills } from "react-icons/gi";
@@ -261,7 +262,7 @@ export default function Home() {
         <p className="max-w-[550px] max-sm:mx-auto text-balance md:text-[40px] my-4 font-semibold font-serif text-3xl">
           Process that moves things forward
         </p>
-        <div className="grid grid-cols-3 gap-0 max-sm:mx-auto">
+        <div className="grid grid-cols-3 gap-0 max-sm:mx-auto border-l-4 border-black px-2">
           <span className="max-w-[300px] flex items-center pt-4 min-h-[200px] max-sm:col-span-3 bg-[url('/step1.png')] bg-cover">
             <p className="max-w-[250px] w-[80%] px-2 pt-7 text-sm text-balance text-start flex flex-col">
               <b className="tracking-wider font-serif">Ideate</b>
@@ -288,31 +289,34 @@ export default function Home() {
       {/* home page processes finish */}
 
       {/* home page recent */}
-      <div className="my-10 max-w-[1000px] mx-auto flex flex-col gap-5">
-        <p className="max-w-[550px] w-fit text-end border-b border-blacktext-balance md:text-[40px] my-4 font-semibold font-serif text-3xl">
-          Process that moves things forward
+      <Separator />
+      <div className="my-10 max-w-[1200px] mx-auto flex flex-col gap-5">
+        <p className="max-w-[550px] w-fit text-center border-b text-balance md:text-[40px] my-10 font-semibold font-serif text-3xl">
+          Recent Showcase
         </p>
-        <div className="sm:mr-auto gap-5 grid grid-cols-2">
+        <div className="sm:mr-auto gap-5 grid grid-cols-2 max-sm:grid-cols-1">
           <RecentCard
             title="Web UI Design"
             image="recent1.png"
             year={2022}
             date="Oct 22"
           />
+          <Separator className="max-sm:hidden" />
           <RecentCard
-            title="Web UI Design"
+            title="To Design digital strategy "
             image="recent2.png"
             year={2022}
             date="Oct 22"
           />
           <RecentCard
-            title="Web UI Design"
+            title="Website development"
             image="recent3.png"
             year={2022}
             date="Oct 22"
           />
+          <Separator className="max-sm:hidden" />
           <RecentCard
-            title="Web UI Design"
+            title="Application development"
             image="recent4.png"
             year={2022}
             date="Oct 22"

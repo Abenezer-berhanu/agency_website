@@ -2,13 +2,13 @@ import Image from "next/image";
 import React from "react";
 
 interface PropsType {
-    title: string;
-    image: string;
-    year: number;
-    date: string;
+  title: string;
+  image: string;
+  year: number;
+  date: string;
 }
 
-function RecentCard({ title, image, year, date }:PropsType) {
+function RecentCard({ title, image, year, date }: PropsType) {
   return (
     <div>
       <article className="flex bg-white transition hover:shadow-xl">
