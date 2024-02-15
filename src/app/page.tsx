@@ -332,12 +332,10 @@ export default function Home() {
       {/* home page testimonials finish */}
 
       {/* home page owner */}
-      <div className="my-10">
+      <div className="mt-10">
         <Owner />
       </div>
       {/* home page owner finish */}
-
-      {/* Empowering Innovation, One Code at a Time */}
     </>
   );
 }
