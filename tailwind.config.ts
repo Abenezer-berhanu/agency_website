@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      screens: {
+        ssm: "400px",
+      },
       colors: {
         gray_white: "#FBFBFB",
         light_green: "#64CCC5",
