@@ -67,20 +67,20 @@ function page() {
 
       {/* what are our mission */}
       <div className="mih-h-[500px] w-full bg-black">
-        <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 w-full p-2">
+        <div className="relative max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 w-full p-2">
           <div className="w-full h-full flex flex-col items-center justify-center gap-4 text-white p-2">
             <p className="font-semibold text-start w-full text-lg text-light_green">
               Our Mission
             </p>
-            <h1 className="font-serif text-5xl font-bold text-start w-full">
+            <h1 className="font-serif text-3xl sm:text-5xl font-bold text-start w-full">
               Boost your with
               <br /> your business.
             </h1>
-            <p className="text-sm text-balance">
+            <p className="text-xs sm:text-balance">
               He moonlights difficult engrossed it, sportsmen. Interested has
               all Devonshire difficulty gay assistance joy.
             </p>
-            <ol className="grid grid-cols-2 text-sm gap-3 max-w-[600px] max-sm:px-5 mr-auto list-disc">
+            <ol className="grid grid-cols-2 text-xs sm:text-sm gap-3 max-w-[600px] max-sm:px-5 mr-auto list-disc">
               <li>Moonlight newspaper up its enjoyment</li>
               <li>Rooms oh fully taken by worse.</li>
               <li>She new course gets living. </li>
@@ -89,7 +89,18 @@ function page() {
               <li>Preference any astonished unreserved Mrs.</li>
             </ol>
           </div>
-          <div className="w-full h-full grid grid-cols-1">
+          <div className="w-full h-full grid grid-cols-1 relative">
+            <div className="absolute bg-white flex flex-col gap-1 right-10 md:right-24 top-2 md:top-10 rounded-md p-2">
+              <p className="text-center text-sm">Team members</p>
+              <Image
+                src={"/team.png"}
+                alt="teams image"
+                width={1000}
+                quality={100}
+                height={500}
+                className="max-w-[120px] md:max-w-[150px]"
+              />
+            </div>
             <span className="grid grid-cols-2">
               <Image
                 src={"/mission2.png"}
