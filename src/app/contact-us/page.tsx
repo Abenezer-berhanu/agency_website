@@ -11,15 +11,29 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 
 function page() {
-  const ContactCard = () => {
+  const ContactCard = ({
+    id,
+    label,
+    link,
+  }: {
+    id: number;
+    label: string;
+    link: string;
+  }) => {
     return (
       <div className="flex gap-4 items-center">
         <span className="h-10 w-10 border flex items-center justify-center rounded-full border-black">
-          <IoMailSharp className="scale-125" />
+          {id === 1 ? (
+            <IoMailSharp className="scale-125" />
+          ) : id === 2 ? (
+            <FaPhoneAlt />
+          ) : (
+            <FaLocationDot />
+          )}
         </span>
-        <span>
-          <b>Our Mail</b>
-          <p>hello@example.com</p>
+        <span className="flex flex-col">
+          <b className="capitalize">{label}</b>
+          <small className="font-serif">{link}</small>
         </span>
       </div>
     );
@@ -36,9 +50,9 @@ function page() {
         </p>
         <Separator />
         <div className="flex flex-col gap-5 w-full">
-          <ContactCard />
-          <ContactCard />
-          <ContactCard />
+          <ContactCard id={1} label="our email" link="hello@exapmple.com" />
+          <ContactCard id={2} label="call us" link="+123 456 7892" />
+          <ContactCard id={3} label="find us" link="Open Google Maps" />
         </div>
         <Separator />
         <div className="flex gap-4 w-fit p-2 mr-auto items-center justify-center">
