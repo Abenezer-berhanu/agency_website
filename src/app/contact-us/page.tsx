@@ -39,7 +39,7 @@ function page() {
     );
   };
   return (
-    <div className="flex gap-2 max-w-[1200px] max-md:flex-col mx-auto w-full px-5 my-10">
+    <div className="flex gap-2 max-w-[1200px] max-md:flex-col mx-auto w-full px-5 my-10 min-h-screen">
       <div className="flex flex-col gap-4 items-center md:w-[40%] h-full">
         <h1 className="font-bold text-start w-full text-4xl font-serif">
           Let{"'"}s Talk
@@ -61,7 +61,7 @@ function page() {
           <SlSocialLinkedin />
         </div>
       </div>
-      <div className="border md:w-[60%] p-3 bg-gray_white rounded-md">
+      <div className="border md:w-[60%] p-3 bg-gray_white rounded-md h-fit">
         <form action="" className="w-full flex flex-col items-center gap-4">
           <div className="w-full grid ssm:grid-cols-2 gap-3">
             <span className="flex flex-col gap-2">
