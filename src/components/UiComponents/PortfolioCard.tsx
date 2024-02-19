@@ -8,7 +8,7 @@ function PortfolioCard(props: {
 }) {
   const { title, description, image } = props;
   return (
-    <article className="group mx-auto max-w-[350px]">
+    <article className="group mx-auto max-w-[350px] w-full">
       <Image
         alt={`${title} image`}
         src={`/${image}`}

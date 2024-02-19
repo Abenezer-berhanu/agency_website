@@ -22,7 +22,7 @@ const config = {
         ssm: "400px",
       },
       colors: {
-        gray_white: "#FBFBFB",
+        gray_white: "#F4F4F4",
         light_green: "#64CCC5",
         text_green: "#64CCC5",
         border: "hsl(var(--border))",
