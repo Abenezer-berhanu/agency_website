@@ -1,11 +1,13 @@
+import TeamCard from "@/components/UiComponents/TeamCard";
 import WhatAreWe from "@/components/UiComponents/WhatAreWe";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { IoMdStar } from "react-icons/io";
 
 function page() {
   return (
-    <div className="mb-36">
+    <div className="mb-24">
       <div className="min-h-[500px] mb-20 w-full max-w-[1200px] mx-auto rounded-md text-white grid grid-cols-1 md:grid-cols-2 bg-black max-md:gap-10 max-md:p-5">
         <div className="w-full flex flex-col px-10 justify-center gap-3 max-md:max-w-[500px] max-md:mx-auto">
           <small>Pleasure and so read the was hope.</small>
@@ -136,6 +138,49 @@ function page() {
         </div>
       </div>
       {/* what are our mission finished */}
+
+      {/* our team card */}
+      <div className="flex flex-col gap-5 mt-5">
+        <h1 className="text-3xl font-bold font-serif text-center">Our team</h1>
+        <div className="grid sm:grid-cols-3 max-w-[1000px] mx-auto gap-5 border-b-2 border-black sm:py-5">
+          <TeamCard
+            name="Esther Howards"
+            task="Founder & CEO"
+            image="teamCI2.png"
+          />
+          <TeamCard
+            name="Cameron Williamson"
+            task="Marketing Head"
+            image="teamCI.png"
+          />
+          <TeamCard
+            name="Liam Cooper"
+            task="Marketing Head"
+            image="teamCI3.png"
+          />
+        </div>
+      </div>
+      {/* our team card finished */}
+
+      {/* our team footer */}
+      <div className="w-[95%] relative rounded-5xl h-36 max-w-[1000px] mx-auto mt-10 flex flex-col items-center justify-center gap-3">
+        <Image
+          src={"/aboutFooter.png"}
+          alt="let's start"
+          width={500}
+          height={200}
+          quality={100}
+          priority
+          className="absolute inset-0 h-full w-full object-cover rounded-3xl z-0"
+        />
+        <h1 className="font-bold text-2xl sm:text-3xl text-white font-serif z-10 px-3 text-balance text-center">
+          Enough talk, let’s get to work
+        </h1>
+        <Button className="bg-gray_white text-black rounded-full z-10 hover:bg-white/80">
+          Get in Touch
+        </Button>
+      </div>
+      {/* our team footer finished */}
     </div>
   );
 }
