@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { getPortfolioById } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 interface Portfolio {
   category: string;
@@ -84,14 +85,25 @@ async function page({ params }: { params: { id: string } }) {
           </ol>
           <div className="w-full my-4 flex flex-wrap gap-5">
             {data.image.map((image: any, idx) => (
-              <Image
-                src={image?.url}
-                alt={"image"}
-                width={500}
-                height={1000}
-                className="max-w-[300px] h-[200px]"
-                key={idx}
-              />
+              <Dialog key={idx}>
+                <DialogTrigger>
+                  <Image
+                    src={image?.url}
+                    alt={"image"}
+                    width={500}
+                    height={1000}
+                    className="max-w-[300px] h-[200px]"
+                  />
+                </DialogTrigger>
+                <DialogContent>
+                  <Image
+                    alt="image"
+                    src={image?.url}
+                    width={500}
+                    height={1000}
+                  />
+                </DialogContent>
+              </Dialog>
             ))}
           </div>
         </div>
