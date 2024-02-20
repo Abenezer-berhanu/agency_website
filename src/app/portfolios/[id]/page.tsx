@@ -54,7 +54,7 @@ async function page({ params }: { params: { id: string } }) {
               quality={100}
               className="w-full h-full object-cover rounded-md"
             />
-            <div className="w-full absolute top-0 sm:bottom-[-40px] flex max-sm:flex-col max-sm:h-full justify-around sm:justify-between p-2">
+            <div className="w-full absolute max-sm:top-0 sm:bottom-[-40px] flex max-sm:flex-col max-sm:h-full justify-around sm:justify-between p-2">
               <span className="w-fit sm:px-8 px-2 sm:py-3 py-1 bg-black text-white flex flex-col rounded-md capitalize text-sm">
                 <b>Category:</b> <small>{data.category}</small>
               </span>
