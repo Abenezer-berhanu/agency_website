@@ -11,7 +11,7 @@ function PortfolioCard(props: {
   const { title, description, image, id } = props;
   return (
     <Link
-      href={`/${id}`}
+      href={`/portfolios/${id}`}
       className="group mx-auto max-w-[350px] w-full hover:shadow-md hover:border-slate-200 border-transparent duration-300 p-2"
     >
       <Image

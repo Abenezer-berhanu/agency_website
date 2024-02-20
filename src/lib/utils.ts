@@ -18,13 +18,13 @@ interface Portfolio {
   solution: string;
   title: string;
   thumbnail: {
-    url: string
-  }
+    url: string;
+  };
   image: [
     {
-      url: string
+      url: string;
     }
-  ]
+  ];
   updatedAt: string;
 }
 
@@ -60,4 +60,36 @@ export const getAllPortfolios = async () => {
   `;
   const result: { portfolios: Portfolio[] } = await request(MASTER_URL, data);
   return result?.portfolios;
+};
+
+export const getPortfolioById = async (id: string) => {
+  const data =
+    gql`
+    query MyQuery {
+      portfolio(where: { id: "` +
+    id +
+    `" }) {
+        id
+        category
+        challenge
+        city
+        client
+        country
+        createdAt
+        date
+        image {
+          url
+        }
+        result
+        smallDesc
+        solution
+        title
+        thumbnail {
+          url
+        }
+      }
+    }
+  `;
+  const result: { portfolio: Portfolio[] } = await request(MASTER_URL, data);
+  return result?.portfolio;
 };
