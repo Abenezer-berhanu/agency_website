@@ -9,7 +9,7 @@ function page() {
   return (
     <div className="mb-24">
       <div className="min-h-[500px] mb-20 w-full max-w-[1200px] mx-auto rounded-md text-white grid grid-cols-1 md:grid-cols-2 bg-black max-md:gap-10 max-md:p-5">
-        <div className="w-full flex flex-col px-10 justify-center gap-3 max-md:max-w-[500px] max-md:mx-auto">
+        <div className="w-full flex flex-col sm:px-10 justify-center gap-3 max-md:max-w-[500px] max-md:mx-auto">
           <small>Pleasure and so read the was hope.</small>
           <h1 className="text-3xl lg:text-5xl font-serif font-semibold flex flex-col gap-1">
             Ready to take{" "}

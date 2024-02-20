@@ -84,7 +84,7 @@ function Testimonilas() {
                 width={500}
                 height={1000}
                 alt="me"
-                src="/me.png"
+                src="/nati.jpg"
                 className="size-14 rounded-full object-cover"
               />
 
@@ -152,7 +152,7 @@ function Testimonilas() {
                 width={500}
                 height={1000}
                 alt="me"
-                src="/me.png"
+                src="/kiya.jpg"
                 className="size-14 rounded-full object-cover"
               />
 

@@ -7,8 +7,8 @@ import {
   SlSocialInstagram,
   SlSocialLinkedin,
 } from "react-icons/sl";
-import React from "react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 function page() {
   const ContactCard = ({
@@ -50,19 +50,29 @@ function page() {
         </p>
         <Separator />
         <div className="flex flex-col gap-5 w-full">
-          <ContactCard id={1} label="our email" link="hello@exapmple.com" />
-          <ContactCard id={2} label="call us" link="+123 456 7892" />
+          <ContactCard
+            id={1}
+            label="our email"
+            link="abenuberhanu271@gmail.com"
+          />
+          <ContactCard id={2} label="call us" link="+251954704213" />
           <ContactCard id={3} label="find us" link="Open Google Maps" />
         </div>
         <Separator />
         <div className="flex gap-4 w-fit p-2 mr-auto items-center justify-center">
-          <SlSocialFacebook />
-          <SlSocialInstagram />
-          <SlSocialLinkedin />
+          <Link href={"https://www.facebook.com/profile.php?id=61551702750724"}>
+            <SlSocialFacebook />
+          </Link>
+          <Link href={"https://www.instagram.com/abenu855/"}>
+            <SlSocialInstagram />
+          </Link>
+          <Link href={"www.linkedin.com/in/abenezer-berhanu"}>
+            <SlSocialLinkedin />
+          </Link>
         </div>
       </div>
       <div className="border md:w-[60%] p-3 bg-gray_white rounded-md h-fit">
-        <form action="" className="w-full flex flex-col items-center gap-4">
+        <form action={""} className="w-full flex flex-col items-center gap-4">
           <div className="w-full grid ssm:grid-cols-2 gap-3">
             <span className="flex flex-col gap-2">
               <label htmlFor="firstName" className="capitalize font-semibold">
@@ -72,6 +82,7 @@ function page() {
                 type="text"
                 id="firstName"
                 name="firstName"
+                required
                 className="bg-transparent py-2 indent-2 border-b-2 outline-none"
               />
             </span>
@@ -83,6 +94,7 @@ function page() {
                 type="text"
                 id="lastName"
                 name="lastName"
+                required
                 className="bg-transparent py-2 indent-2 border-b-2 outline-none"
               />
             </span>
@@ -97,6 +109,7 @@ function page() {
                 type="email"
                 id="email"
                 name="email"
+                required
                 className="bg-transparent py-2 indent-2 border-b-2 outline-none"
               />
             </span>
@@ -108,6 +121,7 @@ function page() {
                 type="text"
                 id="phone"
                 name="phone"
+                required
                 className="bg-transparent py-2 indent-2 border-b-2 outline-none"
               />
             </span>
@@ -120,6 +134,7 @@ function page() {
               <textarea
                 id="message"
                 name="message"
+                required
                 className="bg-transparent py-2 indent-2 border-b-2 outline-none"
               />
             </span>

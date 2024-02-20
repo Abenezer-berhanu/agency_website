@@ -1,9 +1,12 @@
+"use client";
 import Owner from "@/components/UiComponents/Owner";
 import RecentCard from "@/components/UiComponents/RecentCard";
 import Testimonilas from "@/components/UiComponents/Testimonilas";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
+import Link from "next/link";
+import { useRef } from "react";
 import { FaPenClip, FaPenNib } from "react-icons/fa6";
 import { GiSkills } from "react-icons/gi";
 import { GrAnnounce } from "react-icons/gr";
@@ -11,6 +14,11 @@ import { IoIosColorPalette } from "react-icons/io";
 import { MdBrandingWatermark } from "react-icons/md";
 
 export default function Home() {
+  const servicesRef = useRef();
+  const handleScrollToServices = () => {
+    //@ts-ignore
+    servicesRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
       {/* home page landing page  */}
@@ -61,7 +69,10 @@ export default function Home() {
                 massa libero egestas malesuada viverra gravida libero cursus
                 nulla leo pulvinar.
               </p>
-              <Button className="text-black w-fit z-10 rounded-full hover:bg-transparent hover:ring-1 bg-gray_white">
+              <Button
+                className="text-black w-fit z-10 rounded-full hover:bg-transparent hover:text-white hover:ring-1 bg-gray_white"
+                onClick={handleScrollToServices}
+              >
                 What Services?
               </Button>
             </div>
@@ -95,7 +106,7 @@ export default function Home() {
                 alt="trusted by images "
                 width={500}
                 height={1000}
-                className="max-md:w-[90%] mx-auto"
+                className="max-md:w-[90%] max-sm:mx-auto"
               />
             </div>
           </div>
@@ -104,7 +115,11 @@ export default function Home() {
       {/* home page landing page finish*/}
 
       {/* home page services  */}
-      <div className="max-w-[800px] flex flex-col mx-auto my-20 gap-5">
+      <div
+        className="max-w-[800px] flex flex-col mx-auto my-20 gap-5"
+        //  @ts-ignore
+        ref={servicesRef}
+      >
         <div>
           <h1 className="font-semibold font-serif text-light_green text-center">
             Our services
@@ -250,7 +265,7 @@ export default function Home() {
             size={"sm"}
             className="rounded-full bg-gray_white text-black w-fit my-3 hover:bg-slate-200 animate-bounce"
           >
-            Start Your Free Trail
+            <Link href={"/portfolios"}>Portfolios</Link>
           </Button>
         </div>
       </div>

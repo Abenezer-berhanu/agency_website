@@ -49,10 +49,10 @@ function RecentCard({ title, image, year, date }: PropsType) {
 
           <div className="sm:flex sm:items-end sm:justify-end">
             <a
-              href="#"
+              href="/portfolios"
               className="block bg-black px-5 py-3 text-center text-xs font-bold uppercase text-white transition hover:bg-black/80"
             >
-              Check
+              see all
             </a>
           </div>
         </div>
