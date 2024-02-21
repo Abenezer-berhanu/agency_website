@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/UiComponents/NavBar";
 import Footer from "@/components/UiComponents/Footer";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +29,7 @@ export default function RootLayout({
         <div className="mt-auto border">
           <Footer />
         </div>
+        <Toaster />
       </body>
     </html>
   );

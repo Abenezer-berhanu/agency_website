@@ -7,9 +7,9 @@ import {
   SlSocialInstagram,
   SlSocialLinkedin,
 } from "react-icons/sl";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Metadata } from "next";
+import ContactForm from "@/components/UiComponents/ContactForm";
 
 export const metadata: Metadata = {
   title: "contact-us",
@@ -78,75 +78,7 @@ function page() {
         </div>
       </div>
       <div className="border md:w-[60%] p-3 bg-gray_white rounded-md h-fit">
-        <form action={""} className="w-full flex flex-col items-center gap-4">
-          <div className="w-full grid ssm:grid-cols-2 gap-3">
-            <span className="flex flex-col gap-2">
-              <label htmlFor="firstName" className="capitalize font-semibold">
-                first name
-              </label>
-              <input
-                type="text"
-                id="firstName"
-                name="firstName"
-                required
-                className="bg-transparent py-2 indent-2 border-b-2 outline-none"
-              />
-            </span>
-            <span className="flex flex-col gap-2">
-              <label htmlFor="lastName" className="capitalize font-semibold">
-                last name
-              </label>
-              <input
-                type="text"
-                id="lastName"
-                name="lastName"
-                required
-                className="bg-transparent py-2 indent-2 border-b-2 outline-none"
-              />
-            </span>
-          </div>
-
-          <div className="w-full grid ssm:grid-cols-2 gap-3">
-            <span className="flex flex-col gap-2">
-              <label htmlFor="email" className="capitalize font-semibold">
-                email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                className="bg-transparent py-2 indent-2 border-b-2 outline-none"
-              />
-            </span>
-            <span className="flex flex-col gap-2">
-              <label htmlFor="phone" className="capitalize font-semibold">
-                Phone
-              </label>
-              <input
-                type="text"
-                id="phone"
-                name="phone"
-                required
-                className="bg-transparent py-2 indent-2 border-b-2 outline-none"
-              />
-            </span>
-          </div>
-          <div className="w-full">
-            <span className="flex flex-col gap-2 w-full">
-              <label htmlFor="message" className="capitalize font-semibold">
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                required
-                className="bg-transparent py-2 indent-2 border-b-2 outline-none"
-              />
-            </span>
-          </div>
-          <Button className="mr-auto">Submit</Button>
-        </form>
+        <ContactForm />
       </div>
     </div>
   );
