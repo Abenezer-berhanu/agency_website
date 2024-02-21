@@ -4,7 +4,7 @@ import { useFormState } from "react-dom";
 import React, { useEffect } from "react";
 import { Button } from "../ui/button";
 import { useToast } from "../ui/use-toast";
-import { useRef } from "react";}
+import { useRef } from "react";
 
 function ContactForm() {
   const [state, formAction] = useFormState(createEmail, undefined);
@@ -15,6 +15,7 @@ function ContactForm() {
       toast({
         title: `✅${state?.success}`,
       });
+      //@ts-ignore
       formRef?.current?.reset()
     }
   }, [state]);
