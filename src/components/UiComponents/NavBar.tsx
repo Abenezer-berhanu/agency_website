@@ -50,7 +50,7 @@ function NavBar() {
             <SheetTrigger className="text-3xl h-full px-2">
               <IoMdMenu />
             </SheetTrigger>
-            <SheetContent>
+            <SheetContent className="sm:hidden">
               <SheetHeader className="flex flex-col gap-5">
                 <SheetTitle>Abenu Company</SheetTitle>
 
