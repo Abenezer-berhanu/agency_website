@@ -133,7 +133,7 @@ function Testimonilas() {
                 </div>
 
                 <p className="mt-0.5 text-lg font-medium text-gray-900">
-                  Paul Starr
+                  Natnael Berhanu
                 </p>
               </div>
             </div>
@@ -201,7 +201,7 @@ function Testimonilas() {
                 </div>
 
                 <p className="mt-0.5 text-lg font-medium text-gray-900">
-                  Paul Starr
+                  Bekalu Berhanu
                 </p>
               </div>
             </div>
