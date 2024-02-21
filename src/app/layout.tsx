@@ -21,6 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${inter.className} relative flex flex-col font-sans antialiased min-h-screen`}
+        suppressHydrationWarning={true}
       >
         <div>
           <NavBar />

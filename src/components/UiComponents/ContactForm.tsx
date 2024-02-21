@@ -8,7 +8,7 @@ import { useRef } from "react";
 
 function ContactForm() {
   const [state, formAction] = useFormState(createEmail, undefined);
-  const formRef = useRef()
+  const formRef = useRef();
   const { toast } = useToast();
   useEffect(() => {
     if (state?.success) {
@@ -16,13 +16,14 @@ function ContactForm() {
         title: `✅${state?.success}`,
       });
       //@ts-ignore
-      formRef?.current?.reset()
+      formRef?.current?.reset();
     }
   }, [state]);
   return (
     <form
       action={formAction}
       className="w-full flex flex-col items-center gap-4"
+      //@ts-ignore
       ref={formRef}
     >
       <div className="w-full grid ssm:grid-cols-2 gap-3">

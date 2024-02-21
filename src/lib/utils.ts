@@ -146,7 +146,6 @@ export const createEmail = async (currentState: any, formData: FormData) => {
         }
       `;
       const publisherResponse: any = await request(MASTER_URL, publisher);
-      console.log(publisherResponse?.publishEmail?.id);
       if (publisherResponse) {
         return { success: "mail sent" };
       }
