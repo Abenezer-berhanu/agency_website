@@ -4,21 +4,25 @@ import { useFormState } from "react-dom";
 import React, { useEffect } from "react";
 import { Button } from "../ui/button";
 import { useToast } from "../ui/use-toast";
+import { useRef } from "react";}
 
 function ContactForm() {
   const [state, formAction] = useFormState(createEmail, undefined);
+  const formRef = useRef()
   const { toast } = useToast();
   useEffect(() => {
     if (state?.success) {
       toast({
         title: `✅${state?.success}`,
       });
+      formRef?.current?.reset()
     }
   }, [state]);
   return (
     <form
       action={formAction}
       className="w-full flex flex-col items-center gap-4"
+      ref={formRef}
     >
       <div className="w-full grid ssm:grid-cols-2 gap-3">
         <span className="flex flex-col gap-2">
